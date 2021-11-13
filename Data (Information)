@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    struct star
+    {
+     char name[10];
+     int  radius;
+     int  tempreture;
+     int  distancefromearth;
+    }sun;
+
+    printf("\nEnter Star Name :");
+    scanf("%s",sun.name);
+    
+    printf("\nEnter %s's Radius :",sun.name);
+    scanf("%d",&sun.radius);
+    
+    printf("\nEnter %s's tempreture",sun.name);
+    scanf("%d",&sun.tempreture);
+    
+    printf("\nEnter %s's Distance From Earth",sun.name);
+    scanf("%d",&sun.distancefromearth);
+    
+    
+    
+    printf("\nName -                %s ",sun.name);
+    printf("\nRadius -              %d",sun.radius);
+    printf("\nTempreture -          %d",sun.tempreture);
+    printf("\nDistance From Earth - %d",sun.distancefromearth);
+    return 0;
+}

@@ -1,32 +1,173 @@
 #include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
 #include<string.h>
+
+//-----------------------------Global Variable Declaration Zone-------------------------------//
+
+struct star
+{
+char name[30];
+double surface_temperature,mass,age,radius,distance_to_earth;
+char spectral[30];
+char star_type[50];
+}sun,proxima_centauri,betelgeuse;
+
+
+//--------------------------------- Main Function ---------------------------------------------//
+
 int main()
 {
-    struct star
+    int choise,choise2;
+    
+    
+    strcpy(sun.name,"Sun");
+    sun.surface_temperature=5.778;
+    sun.age=4.603;
+    sun.mass=1.989;
+    sun.radius=696.340;
+    sun.distance_to_earth=149.6;
+    strcpy(sun.spectral,"G2V");
+    strcpy(sun.star_type,"Yello Dwarf Star");
+    
+    
+    strcpy(proxima_centauri.name,"Proxima centauri");
+    proxima_centauri.surface_temperature=5.778;
+    proxima_centauri.age=4.603;
+    proxima_centauri.mass=1.989;
+    proxima_centauri.radius=696.340;
+    proxima_centauri.distance_to_earth=149.6;
+    strcpy(proxima_centauri.spectral,"G2V");
+    strcpy(proxima_centauri.star_type,"Yello Dwarf Star");
+    
+    
+    strcpy(betelgeuse.name,"Betelgeuse");
+    betelgeuse.surface_temperature=5.778;
+    betelgeuse.age=4.603;
+    betelgeuse.mass=1.989;
+    betelgeuse.radius=696.340;
+    betelgeuse.distance_to_earth=149.6;
+    strcpy(betelgeuse.spectral,"G2V");
+    strcpy(betelgeuse.star_type,"Yello Dwarf Star");
+    
+    
+    printf("\n1: Star ");
+    printf("\n2: Planet ");
+    printf("\n3: Exoplanet ");
+    printf("\n4: Supermassive Black holes ");
+    scanf("%d",&choise);
+    
+    switch(choise)
     {
-     char name[10];
-     int  radius;
-     int  tempreture;
-     int  distancefromearth;
-    }sun;
+        case 1:
+        printf("\n1: Sun ");
+        printf("\n2: Proxima centauri");
+        printf("\n3: betelgeuse");
+        printf("\n4: Awaited");
+        scanf("%d",&choise2);
+        
+        switch(choise2)
+        {
+            case 1:
+             printf("\n :___Star Information___:\n");
+    printf("\n Star Name            : %s",sun.name);
+    printf("\n Surface_temperature  : %lf k",sun.surface_temperature);
+    printf("\n Age                  : %lf billion years",sun.age);
+    printf("\n Mass                 : %lf*10^30 Kg",sun.mass);
+    printf("\n Radius               : %lf Km",sun.radius);
+    printf("\n Distance From Earth  : %lf million Km",sun.distance_to_earth);
+    printf("\n Star Spectral        : %s",sun.spectral);
+    printf("\n Star Type            : %s",sun.star_type);
+    printf("\n");
+    
+    printf("\n =================================================================================================\n\n\n");
+    
+ printf("  The Sun is the star at the center of the Solar System. It is a nearly perfect ball of hot plasma, ");
+ printf("\n  heated to incandescence by nuclear fusion reactions in its core, radiating the energy mainly as ");
+ printf("\n  visible light, ultraviolet light, and infrared radiation. It is by far the most important source "); 
+ printf("\n  of energy for life on Earth.");
+ 
+ printf("\n\n\n  Section :");
+ 
+ printf("\n\n  There are three main parts to the Sun's interior: the core, the radiative zone, and the convective");   
+ printf("\n  zone.The core is at the center. It the hottest region, where the nuclear fusion reactions that power");
+ printf("\n  the Sun occur. Moving outward, next comes the radiative (or radiation) zone.");
+ 
+ printf("\n\n\n  Composition (Chemical composition of the sun) :");
+ 
+ printf("\n\n  Just like most other stars, the sun is made up mostly of hydrogen, followed by helium. Nearly all");   
+ printf("\n  the remaining matter consists of seven other elements — oxygen, carbon, neon, nitrogen, magnesium,");
+ printf("\n  iron and silicon.");
+ 
+ 
+ printf("\n\n\n  Stages :");
+ 
+ printf("\n\n  The Sun is currently a main sequence star and will remain so for another 4-5 billion years. It will");  
+ printf("\n  then expand and cool to become a red giant, after which it will shrink and heat up again to become a ");
+ printf("\n  white dwarf.");
+ 
+ 
+ printf("\n\n\n  Atmosphere :");
+ 
+ printf("\n\n  corona The corona is the extended atmosphere of the Sun, which has a volume much larger than the volume");  
+ printf("\n  enclosed by the Sun's photosphere.A flow of plasma outward from the Sun into interplanetary space is the"); 
+ printf("\n  solar wind. The heliosphere, the tenuous outermost atmosphere of the Sun, is filled with the solar wind ");
+ printf("\n  plasma.");
+    
+    
+    break;
+    
+    case 2:
+    printf("\n :___Star Information___:\n");
+    printf("\n Star Name            : %s",proxima_centauri.name);
+    printf("\n Surface_temperature  : %lf k",proxima_centauri.surface_temperature);
+    printf("\n Age                  : %lf billion years",proxima_centauri.age);
+    printf("\n Mass                 : %lf*10^30 Kg",proxima_centauri.mass);
+    printf("\n Radius               : %lf Km",proxima_centauri.radius);
+    printf("\n Distance From Earth  : %lf million Km",proxima_centauri.distance_to_earth);
+    printf("\n Star Spectral        : %s",proxima_centauri.spectral);
+    printf("\n Star Type            : %s",proxima_centauri.star_type);
+    printf("\n");
+    break;
+    
+    case 3:
+    
+    printf("\n :___Star Information___:\n");
+    printf("\n Star Name            : %s",betelgeuse.name);
+    printf("\n Surface_temperature  : %lf k",betelgeuse.surface_temperature);
+    printf("\n Age                  : %lf billion years",betelgeuse.age);
+    printf("\n Mass                 : %lf*10^30 Kg",betelgeuse.mass);
+    printf("\n Radius               : %lf Km",betelgeuse.radius);
+    printf("\n Distance From Earth  : %lf million Km",betelgeuse.distance_to_earth);
+    printf("\n Star Spectral        : %s",betelgeuse.spectral);
+    printf("\n Star Type            : %s",betelgeuse.star_type);
+    printf("\n");
+    break;
+    
+    default:
+    printf("\nWrong Chloise Plz Try Again !");
+    
+        }
+    
+    case 2:
+    printf("\nAwaited");
+    break;
+    
+    default:
+    printf("\nTry again !");
+    break;
+    
+            
+            
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
+    
 
-    printf("\nEnter Star Name :");
-    scanf("%s",sun.name);
-    
-    printf("\nEnter %s's Radius :",sun.name);
-    scanf("%d",&sun.radius);
-    
-    printf("\nEnter %s's tempreture",sun.name);
-    scanf("%d",&sun.tempreture);
-    
-    printf("\nEnter %s's Distance From Earth",sun.name);
-    scanf("%d",&sun.distancefromearth);
-    
-    
-    
-    printf("\nName -                %s ",sun.name);
-    printf("\nRadius -              %d",sun.radius);
-    printf("\nTempreture -          %d",sun.tempreture);
-    printf("\nDistance From Earth - %d",sun.distancefromearth);
-    return 0;
-}
+
